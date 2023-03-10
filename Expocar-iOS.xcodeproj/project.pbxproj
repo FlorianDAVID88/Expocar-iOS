@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF6ED24C29B9FC150021FEA5 /* Expocar_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED24B29B9FC150021FEA5 /* Expocar_iOSApp.swift */; };
+		EF6ED24E29B9FC150021FEA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED24D29B9FC150021FEA5 /* ContentView.swift */; };
+		EF6ED25029B9FC160021FEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6ED24F29B9FC160021FEA5 /* Assets.xcassets */; };
+		EF6ED25329B9FC160021FEA5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6ED25229B9FC160021FEA5 /* Preview Assets.xcassets */; };
+		EF6ED25E29B9FCC90021FEA5 /* Stand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED25D29B9FCC90021FEA5 /* Stand.swift */; };
+		EF6ED26029B9FCD50021FEA5 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED25F29B9FCD50021FEA5 /* Users.swift */; };
+		EF6ED26229B9FCE40021FEA5 /* Creneau.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26129B9FCE40021FEA5 /* Creneau.swift */; };
+		EF6ED26429B9FCF30021FEA5 /* ExpocarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26329B9FCF30021FEA5 /* ExpocarViewModel.swift */; };
+		EF6ED26629B9FCFF0021FEA5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26529B9FCFF0021FEA5 /* HomeView.swift */; };
+		EF6ED26829B9FD080021FEA5 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26729B9FD080021FEA5 /* MapView.swift */; };
+		EF6ED26A29B9FD140021FEA5 /* PlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26929B9FD140021FEA5 /* PlanningView.swift */; };
+		EF6ED26C29B9FD2F0021FEA5 /* CreneauMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26B29B9FD2F0021FEA5 /* CreneauMapView.swift */; };
+		EF6ED26E29B9FD4C0021FEA5 /* SliderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26D29B9FD4C0021FEA5 /* SliderBarView.swift */; };
+		EF6ED27029B9FE670021FEA5 /* evildead.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF6ED26F29B9FE670021FEA5 /* evildead.ttf */; };
+		EFD2FE9129BA1695005E28D7 /* DayPlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2FE9029BA1695005E28D7 /* DayPlanningView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EF6ED24829B9FC150021FEA5 /* Expocar-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Expocar-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF6ED24B29B9FC150021FEA5 /* Expocar_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expocar_iOSApp.swift; sourceTree = "<group>"; };
+		EF6ED24D29B9FC150021FEA5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EF6ED24F29B9FC160021FEA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF6ED25229B9FC160021FEA5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF6ED25D29B9FCC90021FEA5 /* Stand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stand.swift; sourceTree = "<group>"; };
+		EF6ED25F29B9FCD50021FEA5 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		EF6ED26129B9FCE40021FEA5 /* Creneau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creneau.swift; sourceTree = "<group>"; };
+		EF6ED26329B9FCF30021FEA5 /* ExpocarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpocarViewModel.swift; sourceTree = "<group>"; };
+		EF6ED26529B9FCFF0021FEA5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EF6ED26729B9FD080021FEA5 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		EF6ED26929B9FD140021FEA5 /* PlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningView.swift; sourceTree = "<group>"; };
+		EF6ED26B29B9FD2F0021FEA5 /* CreneauMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreneauMapView.swift; sourceTree = "<group>"; };
+		EF6ED26D29B9FD4C0021FEA5 /* SliderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderBarView.swift; sourceTree = "<group>"; };
+		EF6ED26F29B9FE670021FEA5 /* evildead.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = evildead.ttf; sourceTree = "<group>"; };
+		EFD2FE9029BA1695005E28D7 /* DayPlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPlanningView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF6ED24529B9FC150021FEA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF6ED23F29B9FC150021FEA5 = {
+			isa = PBXGroup;
+			children = (
+				EF6ED24A29B9FC150021FEA5 /* Expocar-iOS */,
+				EF6ED24929B9FC150021FEA5 /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		EF6ED24929B9FC150021FEA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED24829B9FC150021FEA5 /* Expocar-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF6ED24A29B9FC150021FEA5 /* Expocar-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED25929B9FC600021FEA5 /* Font */,
+				EF6ED25B29B9FC700021FEA5 /* Model */,
+				EF6ED25A29B9FC680021FEA5 /* ViewModel */,
+				EF6ED25C29B9FC760021FEA5 /* View */,
+				EF6ED24B29B9FC150021FEA5 /* Expocar_iOSApp.swift */,
+				EF6ED24F29B9FC160021FEA5 /* Assets.xcassets */,
+				EF6ED25129B9FC160021FEA5 /* Preview Content */,
+			);
+			path = "Expocar-iOS";
+			sourceTree = "<group>";
+		};
+		EF6ED25129B9FC160021FEA5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED25229B9FC160021FEA5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF6ED25929B9FC600021FEA5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED26F29B9FE670021FEA5 /* evildead.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		EF6ED25A29B9FC680021FEA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED26329B9FCF30021FEA5 /* ExpocarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF6ED25B29B9FC700021FEA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED25D29B9FCC90021FEA5 /* Stand.swift */,
+				EF6ED25F29B9FCD50021FEA5 /* Users.swift */,
+				EF6ED26129B9FCE40021FEA5 /* Creneau.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF6ED25C29B9FC760021FEA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EFD2FE9429BA16B7005E28D7 /* Map */,
+				EFD2FE9329BA16AC005E28D7 /* Planning */,
+				EFD2FE9229BA16A0005E28D7 /* Home */,
+				EF6ED24D29B9FC150021FEA5 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EFD2FE9229BA16A0005E28D7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED26529B9FCFF0021FEA5 /* HomeView.swift */,
+				EF6ED26D29B9FD4C0021FEA5 /* SliderBarView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EFD2FE9329BA16AC005E28D7 /* Planning */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED26929B9FD140021FEA5 /* PlanningView.swift */,
+				EFD2FE9029BA1695005E28D7 /* DayPlanningView.swift */,
+			);
+			path = Planning;
+			sourceTree = "<group>";
+		};
+		EFD2FE9429BA16B7005E28D7 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				EF6ED26729B9FD080021FEA5 /* MapView.swift */,
+				EF6ED26B29B9FD2F0021FEA5 /* CreneauMapView.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF6ED24729B9FC150021FEA5 /* Expocar-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF6ED25629B9FC160021FEA5 /* Build configuration list for PBXNativeTarget "Expocar-iOS" */;
+			buildPhases = (
+				EF6ED24429B9FC150021FEA5 /* Sources */,
+				EF6ED24529B9FC150021FEA5 /* Frameworks */,
+				EF6ED24629B9FC150021FEA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Expocar-iOS";
+			productName = "Expocar-iOS";
+			productReference = EF6ED24829B9FC150021FEA5 /* Expocar-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF6ED24029B9FC150021FEA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EF6ED24729B9FC150021FEA5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = EF6ED24329B9FC150021FEA5 /* Build configuration list for PBXProject "Expocar-iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF6ED23F29B9FC150021FEA5;
+			productRefGroup = EF6ED24929B9FC150021FEA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF6ED24729B9FC150021FEA5 /* Expocar-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF6ED24629B9FC150021FEA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF6ED25329B9FC160021FEA5 /* Preview Assets.xcassets in Resources */,
+				EF6ED25029B9FC160021FEA5 /* Assets.xcassets in Resources */,
+				EF6ED27029B9FE670021FEA5 /* evildead.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF6ED24429B9FC150021FEA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFD2FE9129BA1695005E28D7 /* DayPlanningView.swift in Sources */,
+				EF6ED26029B9FCD50021FEA5 /* Users.swift in Sources */,
+				EF6ED26829B9FD080021FEA5 /* MapView.swift in Sources */,
+				EF6ED26629B9FCFF0021FEA5 /* HomeView.swift in Sources */,
+				EF6ED26A29B9FD140021FEA5 /* PlanningView.swift in Sources */,
+				EF6ED24E29B9FC150021FEA5 /* ContentView.swift in Sources */,
+				EF6ED26C29B9FD2F0021FEA5 /* CreneauMapView.swift in Sources */,
+				EF6ED24C29B9FC150021FEA5 /* Expocar_iOSApp.swift in Sources */,
+				EF6ED26E29B9FD4C0021FEA5 /* SliderBarView.swift in Sources */,
+				EF6ED26429B9FCF30021FEA5 /* ExpocarViewModel.swift in Sources */,
+				EF6ED25E29B9FCC90021FEA5 /* Stand.swift in Sources */,
+				EF6ED26229B9FCE40021FEA5 /* Creneau.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EF6ED25429B9FC160021FEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF6ED25529B9FC160021FEA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF6ED25729B9FC160021FEA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Expocar-iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = NO;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "VD.Expocar-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF6ED25829B9FC160021FEA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Expocar-iOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = NO;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "VD.Expocar-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF6ED24329B9FC150021FEA5 /* Build configuration list for PBXProject "Expocar-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6ED25429B9FC160021FEA5 /* Debug */,
+				EF6ED25529B9FC160021FEA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF6ED25629B9FC160021FEA5 /* Build configuration list for PBXNativeTarget "Expocar-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF6ED25729B9FC160021FEA5 /* Debug */,
+				EF6ED25829B9FC160021FEA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF6ED24029B9FC150021FEA5 /* Project object */;
+}
