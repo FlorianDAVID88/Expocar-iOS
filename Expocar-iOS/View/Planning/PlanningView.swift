@@ -9,15 +9,27 @@ import SwiftUI
 
 struct PlanningView: View {
     @State var selectedDay: Day = .Monday
+    @State var selectedStand: Stand = .Stand01
     
     var body: some View {
         VStack {
-            DayPlanningView(day: selectedDay)
+            DayPlanningView(day: selectedDay, stand: selectedStand)
             Picker("Day", selection: $selectedDay) {
                 ForEach(Day.allCases, id: \.self) { d in
                     Text(d.rawValue.prefix(3).uppercased())
                 }
             }.pickerStyle(.segmented)
+            
+            HStack {
+                Text("Stand : ")
+                Picker("Stand", selection: $selectedStand) {
+                    ForEach(Stand.allCases, id: \.self) { st in
+                        if(st != .none) {
+                            Text(st.rawValue.suffix(2))
+                        }
+                    }
+                }.pickerStyle(.menu)
+            }
         }
     }
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF5A88CD29CAFE1E008A1B29 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = EF5A88CC29CAFE1E008A1B29 /* SVGKit */; };
+		EF5A88CF29CAFE1E008A1B29 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = EF5A88CE29CAFE1E008A1B29 /* SVGKitSwift */; };
 		EF6ED24C29B9FC150021FEA5 /* Expocar_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED24B29B9FC150021FEA5 /* Expocar_iOSApp.swift */; };
 		EF6ED24E29B9FC150021FEA5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED24D29B9FC150021FEA5 /* ContentView.swift */; };
 		EF6ED25029B9FC160021FEA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF6ED24F29B9FC160021FEA5 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5A88CF29CAFE1E008A1B29 /* SVGKitSwift in Frameworks */,
+				EF5A88CD29CAFE1E008A1B29 /* SVGKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +177,10 @@
 			dependencies = (
 			);
 			name = "Expocar-iOS";
+			packageProductDependencies = (
+				EF5A88CC29CAFE1E008A1B29 /* SVGKit */,
+				EF5A88CE29CAFE1E008A1B29 /* SVGKitSwift */,
+			);
 			productName = "Expocar-iOS";
 			productReference = EF6ED24829B9FC150021FEA5 /* Expocar-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -201,6 +209,9 @@
 				Base,
 			);
 			mainGroup = EF6ED23F29B9FC150021FEA5;
+			packageReferences = (
+				EF5A88CB29CAFE1E008A1B29 /* XCRemoteSwiftPackageReference "SVGKit" */,
+			);
 			productRefGroup = EF6ED24929B9FC150021FEA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -438,6 +449,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF5A88CB29CAFE1E008A1B29 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF5A88CC29CAFE1E008A1B29 /* SVGKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF5A88CB29CAFE1E008A1B29 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKit;
+		};
+		EF5A88CE29CAFE1E008A1B29 /* SVGKitSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF5A88CB29CAFE1E008A1B29 /* XCRemoteSwiftPackageReference "SVGKit" */;
+			productName = SVGKitSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF6ED24029B9FC150021FEA5 /* Project object */;
 }

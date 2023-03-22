@@ -10,6 +10,7 @@ import SwiftUI
 struct DayPlanningView: View {
     @EnvironmentObject var viewModel: ExpocarViewModel
     @State var day: Day
+    @State var stand: Stand
     
     var body: some View {
         ZStack {
@@ -27,6 +28,6 @@ struct DayPlanningView: View {
 
 struct DayPlanningView_Previews: PreviewProvider {
     static var previews: some View {
-        DayPlanningView(day: .Friday).environmentObject(ExpocarViewModel())
+        DayPlanningView(day: .Friday, stand: .Stand04).environmentObject(ExpocarViewModel())
     }
 }

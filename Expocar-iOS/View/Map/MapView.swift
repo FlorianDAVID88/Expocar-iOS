@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MapView: View {
     @EnvironmentObject var viewModel: ExpocarViewModel
-    @State var selectedStand: Stand = .none
 
     var body: some View {
         VStack(spacing: 20) {
@@ -17,7 +16,15 @@ struct MapView: View {
                 Image("map_svg_background")
                     .resizable()
                 
-                ForEach(viewModel.stands, id: \.self) { st in
+                Image("map_svg_stands")
+                    .resizable()
+                    .renderingMode(.template)
+                    .foregroundColor(.purple)
+                    .onTapGesture {
+                        viewModel.selectedStand = .Stand09
+                    }
+                
+                /*ForEach(Stand.allCases, id: \.self) { st in
                     if(st != .none) {
                         let width = UIImage(named: st.rawValue)!.size.width / st.ratio
                         let height = UIImage(named: st.rawValue)!.size.height / st.ratio
@@ -26,13 +33,13 @@ struct MapView: View {
                             .frame(width: width, height: height)
                             .position(x: st.translation[0] + width/2.0, y: st.translation[1] + height/2.0)
                             .onTapGesture {
-                                selectedStand = st
+                                viewModel.selectedStand = st
                             }
                     }
-                }
+                }*/
             }.aspectRatio(contentMode: .fit)
-            
-            CreneauMapView(stand: selectedStand).environmentObject(ExpocarViewModel())
+            Text("\(viewModel.selectedStand.rawValue)")
+            CreneauMapView(stand: viewModel.selectedStand).environmentObject(ExpocarViewModel())
         }
     }
 }

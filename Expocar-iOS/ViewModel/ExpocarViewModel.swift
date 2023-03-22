@@ -8,16 +8,11 @@
 import Foundation
 
 class ExpocarViewModel: ObservableObject {
-    @Published var stands: [Stand] = []
+    @Published var selectedStand: Stand = .none
     @Published var crenaux: [Creneau] = []
     
     init() {
-        setStands()
         setCrenaux()
-    }
-    
-    func setStands() {
-        stands.append(contentsOf: Stand.allCases)
     }
     
     func setCrenaux() {

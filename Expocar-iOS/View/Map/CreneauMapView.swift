@@ -22,7 +22,7 @@ struct CreneauMapView: View {
                         .frame(height: 45)
                     
                     let hour = viewModel.validValue(value: Calendar.current.dateComponents([.hour], from: creneau.date).hour)
-                    Text("\(hour.debugDescription.count)h  - \(hour.debugDescription.count + 2) H")
+                    Text("\(hour.debugDescription.count)h  - \(hour.debugDescription.count + 2)h")
                         .font(Font.custom("evildead", size: 18))
                         .multilineTextAlignment(.center)
                 }
@@ -78,6 +78,6 @@ struct CreneauMapView: View {
 
 struct CreneauMapView_Previews: PreviewProvider {
     static var previews: some View {
-        CreneauMapView(stand: .Stand9).environmentObject(ExpocarViewModel())
+        CreneauMapView(stand: .none).environmentObject(ExpocarViewModel())
     }
 }
