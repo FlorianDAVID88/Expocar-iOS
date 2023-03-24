@@ -23,6 +23,7 @@
 		EF6ED26C29B9FD2F0021FEA5 /* CreneauMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26B29B9FD2F0021FEA5 /* CreneauMapView.swift */; };
 		EF6ED26E29B9FD4C0021FEA5 /* SliderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6ED26D29B9FD4C0021FEA5 /* SliderBarView.swift */; };
 		EF6ED27029B9FE670021FEA5 /* evildead.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF6ED26F29B9FE670021FEA5 /* evildead.ttf */; };
+		EFC2D40229CDAE87008BB117 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC2D40129CDAE87008BB117 /* SVGView.swift */; };
 		EFD2FE9129BA1695005E28D7 /* DayPlanningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD2FE9029BA1695005E28D7 /* DayPlanningView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		EF6ED26B29B9FD2F0021FEA5 /* CreneauMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreneauMapView.swift; sourceTree = "<group>"; };
 		EF6ED26D29B9FD4C0021FEA5 /* SliderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderBarView.swift; sourceTree = "<group>"; };
 		EF6ED26F29B9FE670021FEA5 /* evildead.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = evildead.ttf; sourceTree = "<group>"; };
+		EFC2D40129CDAE87008BB117 /* SVGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGView.swift; sourceTree = "<group>"; };
+		EFC2D40329CDB76B008BB117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EFD2FE9029BA1695005E28D7 /* DayPlanningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPlanningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +81,7 @@
 		EF6ED24A29B9FC150021FEA5 /* Expocar-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EFC2D40329CDB76B008BB117 /* Info.plist */,
 				EF6ED25929B9FC600021FEA5 /* Font */,
 				EF6ED25B29B9FC700021FEA5 /* Model */,
 				EF6ED25A29B9FC680021FEA5 /* ViewModel */,
@@ -157,6 +161,7 @@
 			children = (
 				EF6ED26729B9FD080021FEA5 /* MapView.swift */,
 				EF6ED26B29B9FD2F0021FEA5 /* CreneauMapView.swift */,
+				EFC2D40129CDAE87008BB117 /* SVGView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 				EF6ED26A29B9FD140021FEA5 /* PlanningView.swift in Sources */,
 				EF6ED24E29B9FC150021FEA5 /* ContentView.swift in Sources */,
 				EF6ED26C29B9FD2F0021FEA5 /* CreneauMapView.swift in Sources */,
+				EFC2D40229CDAE87008BB117 /* SVGView.swift in Sources */,
 				EF6ED24C29B9FC150021FEA5 /* Expocar_iOSApp.swift in Sources */,
 				EF6ED26E29B9FD4C0021FEA5 /* SliderBarView.swift in Sources */,
 				EF6ED26429B9FCF30021FEA5 /* ExpocarViewModel.swift in Sources */,
@@ -381,6 +387,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Expocar-iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Expocar-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = NO;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -409,6 +416,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Expocar-iOS/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Expocar-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = NO;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

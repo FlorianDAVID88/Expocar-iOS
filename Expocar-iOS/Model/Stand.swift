@@ -10,7 +10,7 @@ import Foundation
 enum Stand: String, CaseIterable {
     case Stand01, Stand02, Stand03, Stand04, Stand05, Stand06, Stand07, Stand08, Stand09, Stand10, Stand11, none
 
-    /*var ratio: Double { return 800.0/393.0 }
+    var ratio: Double { return 800.0/393.0 }
 
     var translation: [Double] {
         switch self {
@@ -27,7 +27,7 @@ enum Stand: String, CaseIterable {
             case .Stand11: return [167.615 * ratio, 180.865 * ratio]
             case .none: return [0.0, 0.0]
         }
-    }*/
+    }
 }
 
 enum Activity: String, CaseIterable {

@@ -18,8 +18,6 @@ struct MapView: View {
                 
                 Image("map_svg_stands")
                     .resizable()
-                    .renderingMode(.template)
-                    .foregroundColor(.purple)
                     .onTapGesture {
                         viewModel.selectedStand = .Stand09
                     }
@@ -38,6 +36,7 @@ struct MapView: View {
                     }
                 }*/
             }.aspectRatio(contentMode: .fit)
+            
             Text("\(viewModel.selectedStand.rawValue)")
             CreneauMapView(stand: viewModel.selectedStand).environmentObject(ExpocarViewModel())
         }
