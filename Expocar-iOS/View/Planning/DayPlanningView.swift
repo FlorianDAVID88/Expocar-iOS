@@ -15,7 +15,16 @@ struct DayPlanningView: View {
     var body: some View {
         ZStack {
             Color.green.opacity(0.25)
-            VStack(spacing: 5) {
+            VStack(spacing: 10) {
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(height: 150)
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(height: 150)
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(height: 150)
                 /*ForEach(viewModel.getCreneauxFromDay(date: Date()), id: \.self.id_creneau) { cr in
                     Rectangle()
                         .foregroundColor(.gray)

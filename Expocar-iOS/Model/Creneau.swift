@@ -15,36 +15,48 @@ struct Creneau {
     var id_creneau = UUID()
     var provider: User
     var stand: Stand
-    var date: Date
+    var day: Day
+    var hour: Int
     
     static var allCases = [
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 6), date: getDateTime(day: 9, month: 7, year: 2023, hour: 10, min: 00)),
-        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 16, min: 00)),
-        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 8), date: getDateTime(day: 9, month: 7, year: 2023, hour: 18, min: 00)),
-        Creneau(provider: getProviderNum(num: 4), stand: getStandNum(num: 3), date: getDateTime(day: 9, month: 7, year: 2023, hour: 10, min: 00)),
-        Creneau(provider: getProviderNum(num: 4), stand: getStandNum(num: 1), date: getDateTime(day: 9, month: 7, year: 2023, hour: 12, min: 00)),
-        Creneau(provider: getProviderNum(num: 5), stand: getStandNum(num: 1), date: getDateTime(day: 9, month: 7, year: 2023, hour: 16, min: 00)),
-        Creneau(provider: getProviderNum(num: 5), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 18, min: 00)),
-        Creneau(provider: getProviderNum(num: 6), stand: getStandNum(num: 10), date: getDateTime(day: 9, month: 7, year: 2023, hour: 12, min: 00)),
-        Creneau(provider: getProviderNum(num: 6), stand: getStandNum(num: 8), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 7), stand: getStandNum(num: 3), date: getDateTime(day: 9, month: 7, year: 2023, hour: 16, min: 00)),
-        Creneau(provider: getProviderNum(num: 7), stand: getStandNum(num: 6), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 8), stand: getStandNum(num: 8), date: getDateTime(day: 9, month: 7, year: 2023, hour: 10, min: 00)),
-        Creneau(provider: getProviderNum(num: 8), stand: getStandNum(num: 9), date: getDateTime(day: 9, month: 7, year: 2023, hour: 18, min: 00)),
-        Creneau(provider: getProviderNum(num: 9), stand: getStandNum(num: 5), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 9), stand: getStandNum(num: 8), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 10), stand: getStandNum(num: 9), date: getDateTime(day: 9, month: 7, year: 2023, hour: 12, min: 00)),
-        Creneau(provider: getProviderNum(num: 10), stand: getStandNum(num: 2), date: getDateTime(day: 9, month: 7, year: 2023, hour: 08, min: 00)),
-        //Creneau(provider: getProviderNum(num: 11), stand: getStandNum(num: 8), date: getDateTime(day: 9, month: 7, year: 2023, hour: 12, min: 00)),
-        //Creneau(provider: getProviderNum(num: 11), stand: getStandNum(num: 1), date: getDateTime(day: 9, month: 7, year: 2023, hour: 08, min: 00))
-        /*Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), date: getDateTime(day: 9, month: 7, year: 2023, hour: 14, min: 00)),*/
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 6), day: .Monday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 7), day: .Monday, hour: 16),
+        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 8), day: .Monday, hour: 18),
+        Creneau(provider: getProviderNum(num: 4), stand: getStandNum(num: 3), day: .Monday, hour: 10),
+        Creneau(provider: getProviderNum(num: 4), stand: getStandNum(num: 1), day: .Monday, hour: 12),
+        Creneau(provider: getProviderNum(num: 5), stand: getStandNum(num: 1), day: .Monday, hour: 16),
+        Creneau(provider: getProviderNum(num: 5), stand: getStandNum(num: 7), day: .Monday, hour: 18),
+        Creneau(provider: getProviderNum(num: 6), stand: getStandNum(num: 10), day: .Monday, hour: 12),
+        Creneau(provider: getProviderNum(num: 6), stand: getStandNum(num: 8), day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 7), stand: getStandNum(num: 3), day: .Monday, hour: 16),
+        Creneau(provider: getProviderNum(num: 7), stand: getStandNum(num: 6), day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 8), stand: getStandNum(num: 8), day: .Monday, hour: 10),
+        Creneau(provider: getProviderNum(num: 8), stand: getStandNum(num: 9), day: .Monday, hour: 18),
+        Creneau(provider: getProviderNum(num: 9), stand: getStandNum(num: 5), day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 9), stand: getStandNum(num: 8), day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 10), stand: getStandNum(num: 9), day: .Monday, hour: 12),
+        Creneau(provider: getProviderNum(num: 10), stand: getStandNum(num: 2), day: .Monday, hour: 8),
+        Creneau(provider: getProviderNum(num: 11), stand: getStandNum(num: 8), day: .Monday, hour: 12),
+        Creneau(provider: getProviderNum(num: 11), stand: getStandNum(num: 1), day: .Monday, hour: 8),
+        
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 6), day: .Tuesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 7), day: .Tuesday, hour: 16),
+        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 8), day: .Tuesday, hour: 18),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+
+        /*Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+         Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Monday, hour: 14),
+         Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Monday, hour: 14),*/
     ]
     
     

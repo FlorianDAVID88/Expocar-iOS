@@ -37,6 +37,7 @@ struct User {
     var activity: Activity
     var type_user: TypeUser
     var societe: Societe
+    var comments: [Comment] = [Comment(content_comment: "Great", note: 4)]
     
     static var allCases = [
         User(name: "Mbizi", surname: "Charlene", email: "charlene@gmail.com", activity: .none, type_user: .Organizer, societe: .none),

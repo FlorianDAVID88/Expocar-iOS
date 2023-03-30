@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel: ExpocarViewModel
     var body: some View {
         VStack {
             Text("Expocar").font(Font.custom("evildead", size: 32))
@@ -19,7 +20,7 @@ struct ContentView: View {
                         Text("Home")
                     }
                 
-                MapView().environmentObject(ExpocarViewModel())
+                MapView()
                     .tabItem {
                         Image(systemName: "map")
                         Text("Map")
@@ -37,6 +38,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(ExpocarViewModel())
     }
 }

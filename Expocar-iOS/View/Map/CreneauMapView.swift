@@ -21,8 +21,8 @@ struct CreneauMapView: View {
                         .opacity(0.25)
                         .frame(height: 45)
                     
-                    let hour = viewModel.validValue(value: Calendar.current.dateComponents([.hour], from: creneau.date).hour)
-                    Text("\(hour.debugDescription.count)h  - \(hour.debugDescription.count + 2)h")
+                    let hour = creneau.hour
+                    Text("\(stand.rawValue) : \(hour)h  - \(hour + 2)h")
                         .font(Font.custom("evildead", size: 18))
                         .multilineTextAlignment(.center)
                 }
@@ -32,7 +32,7 @@ struct CreneauMapView: View {
                         .opacity(0.25)
                         .frame(height: 150)
                     
-                    VStack(spacing: 15) {
+                    VStack(spacing: 10) {
                         HStack(spacing: 50) {
                             Image("\(creneau.provider.societe.rawValue)_logo")
                                 .resizable()
@@ -43,7 +43,17 @@ struct CreneauMapView: View {
                             }
                         }
                         Text("\(creneau.provider.activity.rawValue)")
-                        Text("Visit contractor's page").underline().foregroundColor(.blue)
+                        Button {
+                        } label: {
+                            NavigationLink(destination: ContractorDetailsView(provider: creneau.provider)) {
+                                ZStack {
+                                    Rectangle()
+                                        .foregroundColor(.blue)
+                                        .frame(width: 250, height: 30)
+                                    Text("Visit contractor's page").foregroundColor(.white)
+                                }
+                            }
+                        }
                     }
                     .font(Font.custom("evildead", size: 18))
                     .multilineTextAlignment(.center)
@@ -78,6 +88,6 @@ struct CreneauMapView: View {
 
 struct CreneauMapView_Previews: PreviewProvider {
     static var previews: some View {
-        CreneauMapView(stand: .none).environmentObject(ExpocarViewModel())
+        CreneauMapView(stand: .Stand10).environmentObject(ExpocarViewModel())
     }
 }

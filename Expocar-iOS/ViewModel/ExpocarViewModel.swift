@@ -21,7 +21,7 @@ class ExpocarViewModel: ObservableObject {
     
     func getCreneauxFromStand(stand: Stand) -> [Creneau] {
         var creneaux: [Creneau] = []
-        for cr in Creneau.allCases {
+        for cr in crenaux {
             if cr.stand == stand {
                 creneaux.append(cr)
             }
@@ -29,10 +29,10 @@ class ExpocarViewModel: ObservableObject {
         return creneaux
     }
     
-    func getCreneauxFromDay(date: Date) -> [Creneau] {
+    func getCreneauxFromDay(day: Day) -> [Creneau] {
         var creneaux: [Creneau] = []
-        for cr in Creneau.allCases {
-            if cr.date == date {
+        for cr in crenaux {
+            if cr.day == day {
                 creneaux.append(cr)
             }
         }
