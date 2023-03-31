@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NotCreneauMapView: View {
-    @State var stand: Stand
+    let stand: Stand
     
     var body: some View {
         VStack {

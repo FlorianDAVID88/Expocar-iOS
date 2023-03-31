@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CreneauMapView: View {
-    @State var creneau: Creneau
+    let creneau: Creneau
     
     var body: some View {
         ZStack {

@@ -7,20 +7,6 @@
 
 import Foundation
 
-enum Societe: String, CaseIterable {
-    case none
-    case Renault
-    case Peugeot
-    case Citroen
-    case Fiat
-    case Ford
-    case Mercedes
-    case BMW
-    case Audi
-    case Volkswagen
-    case Toyota
-}
-
 enum TypeUser: String, CaseIterable {
     case Organizer
     case Provider
