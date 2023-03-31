@@ -49,10 +49,10 @@ struct ContractorDetailsView: View {
                             .padding()
                     }
                 }
-                //if viewModel.selectedProvider.comments.count > 0 {
+                if viewModel.selectedProvider.comments.count > 0 {
                     Button {
                     } label: {
-                        NavigationLink(destination: AllCommentsView(provider: provider)) {
+                        NavigationLink(destination: AllCommentsView()) {
                             Text("View all comments")
                                 .foregroundColor(.white)
                                 .font(Font.custom("evildead", size: 16))
@@ -63,7 +63,7 @@ struct ContractorDetailsView: View {
                                 .padding()
                         }
                     }
-                //}
+                }
             }
         }
     }

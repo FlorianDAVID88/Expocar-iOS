@@ -17,7 +17,6 @@ struct MapView: View {
                     Image("map_svg_background")
                         .resizable()
                     
-                
                     ForEach(Stand.allCases, id: \.self) { st in
                         if(st != .none) {
                             let width = UIImage(named: st.rawValue)!.size.width / st.ratio
@@ -28,6 +27,13 @@ struct MapView: View {
                                 .position(x: st.translation[0] + width/2.0, y: st.translation[1] + height/2.0)
                                 .onTapGesture {
                                     viewModel.selectedStand = st
+                                    
+                                    let day: Day = viewModel.getDayFromDateNow()
+                                    let hour = viewModel.getHourFromDateNow() + 14
+                                    let creneaux: [Creneau] = viewModel.getCreneauxFromStandAndDay(stand: st, day: day, hour: hour)
+                                    if creneaux.count > 0 {
+                                        viewModel.selectedProvider = creneaux[0].provider
+                                    }
                                 }
                         }
                     }

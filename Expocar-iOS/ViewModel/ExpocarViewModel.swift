@@ -72,7 +72,9 @@ class ExpocarViewModel: ObservableObject {
         dateFormatter.dateFormat = "hh:mm a"
 
         let timeString = dateFormatter.string(from: date)
-        
+        if Int(timeString.prefix(2))! == 12 {
+            return timeString.contains("AM") ? 0 : 12
+        }
         return timeString.contains("PM") ? Int(timeString.prefix(2))! + 12 : Int(timeString.prefix(2))!
     }
     

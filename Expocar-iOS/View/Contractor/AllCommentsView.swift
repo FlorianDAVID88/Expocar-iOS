@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct AllCommentsView: View {
-    @State var provider: User
+    @EnvironmentObject var viewModel: ExpocarViewModel
     
     var body: some View {
         VStack {
+            let provider = viewModel.selectedProvider
             Text("All comments for \(provider.surname) \(provider.name)")
                 .padding()
                 .font(Font.custom("evildead", size: 28))
@@ -40,6 +41,6 @@ struct AllCommentsView: View {
 
 struct AllCommentsView_Previews: PreviewProvider {
     static var previews: some View {
-        AllCommentsView(provider: User.allCases[1])
+        AllCommentsView().environmentObject(ExpocarViewModel())
     }
 }
