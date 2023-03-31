@@ -5,6 +5,7 @@
 //  Created by user234243 on 3/9/23.
 //
 
+import Localize_Swift   // Bilbiothèque pour la traduction instantanée d'un String
 import Foundation
 
 class ExpocarViewModel: ObservableObject {
@@ -49,6 +50,30 @@ class ExpocarViewModel: ObservableObject {
             }
         }
         return creneaux
+    }
+    
+    
+    func getDayFromDateNow() -> Day {
+        let date = Date.now
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let dayStr = dateFormatter.string(from: date).localized()
+        for d in Day.allCases {
+            if d.rawValue == dayStr {
+                return d
+            }
+        }
+        return .none
+    }
+    
+    func getHourFromDateNow() -> Int {
+        let date = Date.now
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+
+        let timeString = dateFormatter.string(from: date)
+        
+        return timeString.contains("PM") ? Int(timeString.prefix(2))! + 12 : Int(timeString.prefix(2))!
     }
     
     func addComment(comment: String, grade: Int) {

@@ -10,8 +10,6 @@ import SwiftUI
 struct ContractorDetailsView: View {
     @EnvironmentObject var viewModel: ExpocarViewModel    
     @State var provider: User
-    @State var showAddComment = false
-    @State var showAllComments = false
     
     var body: some View {
         VStack(spacing: 15) {
@@ -39,7 +37,6 @@ struct ContractorDetailsView: View {
             
             HStack {
                 Button {
-                    showAddComment.toggle()
                 } label: {
                     NavigationLink(destination: AddCommentView()) {
                         Text("Add comment")
@@ -54,9 +51,8 @@ struct ContractorDetailsView: View {
                 }
                 if viewModel.selectedProvider.comments.count > 0 {
                     Button {
-                        showAllComments.toggle()
                     } label: {
-                        NavigationLink(destination: AllCommentsView()) {
+                        NavigationLink(destination: AllCommentsView(provider: provider)) {
                             Text("View all comments")
                                 .foregroundColor(.white)
                                 .font(Font.custom("evildead", size: 16))

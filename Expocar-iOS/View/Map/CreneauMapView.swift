@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CreneauMapView: View {
+    @EnvironmentObject var viewModel: ExpocarViewModel
     @State var creneau: Creneau
     
     var body: some View {
@@ -43,6 +44,7 @@ struct CreneauMapView: View {
                         }
                         Text("\(creneau.provider.activity.rawValue)")
                         Button {
+                            viewModel.selectedProvider = creneau.provider
                         } label: {
                             NavigationLink(destination: ContractorDetailsView(provider: creneau.provider)) {
                                 ZStack {
@@ -65,5 +67,6 @@ struct CreneauMapView: View {
 struct CreneauMapView_Previews: PreviewProvider {
     static var previews: some View {
         CreneauMapView(creneau: Creneau(provider: getProviderNum(num: 1), stand: .Stand07, day: .Monday, hour: 14))
+            .environmentObject(ExpocarViewModel())
     }
 }

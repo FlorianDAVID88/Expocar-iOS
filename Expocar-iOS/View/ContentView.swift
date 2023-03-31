@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  Expocar_iOS
+//  Expocar-iOS
 //
 //  Created by user234243 on 3/1/23.
 //
@@ -20,7 +20,7 @@ struct ContentView: View {
                         Text("Home")
                     }
                 
-                MapView().environmentObject(ExpocarViewModel())
+                MapView()
                     .tabItem {
                         Image(systemName: "map")
                         Text("Map")

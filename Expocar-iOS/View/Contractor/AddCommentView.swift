@@ -15,7 +15,8 @@ struct AddCommentView: View {
     
     var body: some View {
         VStack(spacing: 15) {
-            Text("New comment")
+            let provider = viewModel.selectedProvider
+            Text("New comment for \(provider.surname) \(provider.name)")
                 .padding()
                 .font(Font.custom("evildead", size: 28))
                 .multilineTextAlignment(.center)

@@ -33,7 +33,7 @@ struct MapView: View {
                     }
                 }.aspectRatio(contentMode: .fit)
                 
-                SliderCreneauxMapView()
+                StandCreneauMapView()
             }
         }
     }
