@@ -8,7 +8,7 @@
 import Foundation
 
 enum Day: String, CaseIterable {
-    case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+    case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, none
 }
 
 struct Creneau {
@@ -19,240 +19,163 @@ struct Creneau {
     var hour: Int
     
     static var allCases = [
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Monday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 6), day: .Monday, hour: 10),
-        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 7), day: .Monday, hour: 16),
-        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 8), day: .Monday, hour: 18),
-        Creneau(provider: getProviderNum(num: 4), stand: getStandNum(num: 3), day: .Monday, hour: 10),
-        Creneau(provider: getProviderNum(num: 4), stand: getStandNum(num: 1), day: .Monday, hour: 12),
-        Creneau(provider: getProviderNum(num: 5), stand: getStandNum(num: 1), day: .Monday, hour: 16),
-        Creneau(provider: getProviderNum(num: 5), stand: getStandNum(num: 7), day: .Monday, hour: 18),
-        Creneau(provider: getProviderNum(num: 6), stand: getStandNum(num: 10), day: .Monday, hour: 12),
-        Creneau(provider: getProviderNum(num: 6), stand: getStandNum(num: 8), day: .Monday, hour: 14),
-        Creneau(provider: getProviderNum(num: 7), stand: getStandNum(num: 3), day: .Monday, hour: 16),
-        Creneau(provider: getProviderNum(num: 7), stand: getStandNum(num: 6), day: .Monday, hour: 14),
-        Creneau(provider: getProviderNum(num: 8), stand: getStandNum(num: 8), day: .Monday, hour: 10),
-        Creneau(provider: getProviderNum(num: 8), stand: getStandNum(num: 9), day: .Monday, hour: 18),
-        Creneau(provider: getProviderNum(num: 9), stand: getStandNum(num: 5), day: .Monday, hour: 14),
-        Creneau(provider: getProviderNum(num: 9), stand: getStandNum(num: 8), day: .Monday, hour: 14),
-        Creneau(provider: getProviderNum(num: 10), stand: getStandNum(num: 9), day: .Monday, hour: 12),
-        Creneau(provider: getProviderNum(num: 10), stand: getStandNum(num: 2), day: .Monday, hour: 8),
-        Creneau(provider: getProviderNum(num: 11), stand: getStandNum(num: 8), day: .Monday, hour: 12),
-        Creneau(provider: getProviderNum(num: 11), stand: getStandNum(num: 1), day: .Monday, hour: 8),
+        // jour 1
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand07, day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand06, day: .Monday, hour: 10),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand07, day: .Monday, hour: 16),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand08, day: .Monday, hour: 18),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand03, day: .Monday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand01, day: .Monday, hour: 12),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand01, day: .Monday, hour: 16),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand07, day: .Monday, hour: 18),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand10, day: .Monday, hour: 12),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand08, day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand03, day: .Monday, hour: 16),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand06, day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand08, day: .Monday, hour: 10),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand09, day: .Monday, hour: 18),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand05, day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand08, day: .Monday, hour: 14),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand09, day: .Monday, hour: 12),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand02, day: .Monday, hour: 8),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand08, day: .Monday, hour: 12),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand01, day: .Monday, hour: 8),
         
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 6), day: .Tuesday, hour: 10),
-        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 7), day: .Tuesday, hour: 16),
-        Creneau(provider: getProviderNum(num: 3), stand: getStandNum(num: 8), day: .Tuesday, hour: 18),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-        Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
+        // jour 2
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand07, day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand06, day: .Tuesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand07, day: .Tuesday, hour: 16),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand08, day: .Tuesday, hour: 18),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand03, day: .Tuesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand01, day: .Tuesday, hour: 12),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand01, day: .Tuesday, hour: 16),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand07, day: .Tuesday, hour: 18),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand10, day: .Tuesday, hour: 12),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand08, day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand03, day: .Tuesday, hour: 16),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand06, day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand08, day: .Tuesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand09, day: .Tuesday, hour: 18),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand05, day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand08, day: .Tuesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand09, day: .Tuesday, hour: 12),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand02, day: .Tuesday, hour: 12),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand08, day: .Tuesday, hour: 12),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand01, day: .Tuesday, hour: 08),
+        
+        //jour 3
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand10, day: .Wednesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand08, day: .Wednesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand07, day: .Wednesday, hour: 16),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand08, day: .Wednesday, hour: 18),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand03, day: .Wednesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand06, day: .Wednesday, hour: 12),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand10, day: .Wednesday, hour: 16),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand05, day: .Wednesday, hour: 18),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand04, day: .Wednesday, hour: 12),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand02, day: .Wednesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand02, day: .Wednesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand06, day: .Wednesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand07, day: .Wednesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand09, day: .Wednesday, hour: 18),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand03, day: .Wednesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand07, day: .Wednesday, hour: 14),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand03, day: .Wednesday, hour: 16),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand08, day: .Wednesday, hour: 10),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand01, day: .Wednesday, hour: 18),
 
-        /*Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Tuesday, hour: 14),
-         Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Monday, hour: 14),
-         Creneau(provider: getProviderNum(num: 2), stand: getStandNum(num: 7), day: .Monday, hour: 14),*/
+        // jour 4
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand01, day: .Thursday, hour: 08),
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand02, day: .Thursday, hour: 10),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand02, day: .Thursday, hour: 16),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand03, day: .Thursday, hour: 18),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand09, day: .Thursday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand08, day: .Thursday, hour: 12),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand02, day: .Thursday, hour: 16),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand05, day: .Thursday, hour: 18),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand10, day: .Thursday, hour: 10),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand07, day: .Thursday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand02, day: .Thursday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand03, day: .Thursday, hour: 16),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand05, day: .Thursday, hour: 10),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand10, day: .Thursday, hour: 18),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand10, day: .Thursday, hour: 10),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand07, day: .Thursday, hour: 14),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand07, day: .Thursday, hour: 08),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand09, day: .Thursday, hour: 14),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand01, day: .Thursday, hour: 10),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand01, day: .Thursday, hour: 18),
+
+        // jour 5
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand10, day: .Friday, hour: 08),
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand03, day: .Friday, hour: 10),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand07, day: .Friday, hour: 16),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand03, day: .Friday, hour: 18),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand09, day: .Friday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand02, day: .Friday, hour: 12),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand02, day: .Friday, hour: 16),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand06, day: .Friday, hour: 18),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand10, day: .Friday, hour: 10),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand02, day: .Friday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand08, day: .Friday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand03, day: .Friday, hour: 14),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand02, day: .Friday, hour: 10),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand05, day: .Friday, hour: 18),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand08, day: .Friday, hour: 10),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand07, day: .Friday, hour: 14),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand07, day: .Friday, hour: 08),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand09, day: .Friday, hour: 14),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand05, day: .Friday, hour: 10),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand06, day: .Friday, hour: 18),
+
+        // jour 6
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand01, day: .Saturday, hour: 08),
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand02, day: .Saturday, hour: 10),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand02, day: .Saturday, hour: 16),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand03, day: .Saturday, hour: 18),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand09, day: .Saturday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand08, day: .Saturday, hour: 12),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand02, day: .Saturday, hour: 16),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand08, day: .Saturday, hour: 18),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand10, day: .Saturday, hour: 10),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand07, day: .Saturday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand02, day: .Saturday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand03, day: .Saturday, hour: 14),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand05, day: .Saturday, hour: 10),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand10, day: .Saturday, hour: 18),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand10, day: .Saturday, hour: 10),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand05, day: .Saturday, hour: 14),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand07, day: .Saturday, hour: 08),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand09, day: .Saturday, hour: 14),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand01, day: .Saturday, hour: 10),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand03, day: .Saturday, hour: 18),
+
+        // jour 7
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand07, day: .Sunday, hour: 14),
+        Creneau(provider: getProviderNum(num: 1), stand: .Stand06, day: .Sunday, hour: 10),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand07, day: .Sunday, hour: 16),
+        Creneau(provider: getProviderNum(num: 2), stand: .Stand08, day: .Sunday, hour: 18),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand03, day: .Sunday, hour: 10),
+        Creneau(provider: getProviderNum(num: 3), stand: .Stand01, day: .Sunday, hour: 12),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand01, day: .Sunday, hour: 16),
+        Creneau(provider: getProviderNum(num: 4), stand: .Stand07, day: .Sunday, hour: 18),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand10, day: .Sunday, hour: 12),
+        Creneau(provider: getProviderNum(num: 5), stand: .Stand08, day: .Sunday, hour: 14),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand03, day: .Sunday, hour: 16),
+        Creneau(provider: getProviderNum(num: 6), stand: .Stand06, day: .Sunday, hour: 14),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand08, day: .Sunday, hour: 10),
+        Creneau(provider: getProviderNum(num: 7), stand: .Stand09, day: .Sunday, hour: 18),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand05, day: .Sunday, hour: 14),
+        Creneau(provider: getProviderNum(num: 8), stand: .Stand08, day: .Sunday, hour: 14),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand09, day: .Sunday, hour: 12),
+        Creneau(provider: getProviderNum(num: 9), stand: .Stand02, day: .Sunday, hour: 12),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand08, day: .Sunday, hour: 12),
+        Creneau(provider: getProviderNum(num: 10), stand: .Stand01, day: .Sunday, hour: 08)
+        
     ]
     
     
 }
-    /*
-     INSERT INTO creneaux VALUES
-       -- jour 1
-        -- jour 2
-         -- pres2
-         (2,7,'2023-01-10 14:00:00'),
-         (2,6,'2023-01-10 10:00:00'),
-         -- pres3
-         (3,7,'2023-01-10 16:00:00'),
-         (3,8,'2023-01-10 18:00:00'),
-         -- pres4
-         (4,3,'2023-01-10 10:00:00'),
-         (4,1,'2023-01-10 12:00:00'),
-         -- pres5
-         (5,1,'2023-01-10 16:00:00'),
-         (5,7,'2023-01-10 18:00:00'),
-         -- pres6
-         (6,10,'2023-01-10 12:00:00'),
-         (6,8,'2023-01-10 14:00:00'),
-         -- pres7
-         (7,3,'2023-01-10 16:00:00'),
-         (7,6,'2023-01-10 14:00:00'),
-         -- pres8
-         (8,8,'2023-01-10 10:00:00'),
-         (8,9,'2023-01-10 18:00:00'),
-         -- pres9
-         (9,5,'2023-01-10 14:00:00'),
-         (9,8,'2023-01-10 14:00:00'),
-         -- pres10
-         (10,9,'2023-01-10 12:00:00'),
-         (10,2,'2023-01-10 12:00:00'),
-         -- pres11
-         (11,8,'2023-01-10 12:00:00'),
-         (11,1,'2023-01-10 08:00:00'),
-         -- jour 3
-         -- pres2
-         (2,10,'2023-01-11 14:00:00'),
-         (2,8,'2023-01-11 10:00:00'),
-         -- pres3
-         (3,7,'2023-01-11 16:00:00'),
-         (3,8,'2023-01-11 18:00:00'),
-         -- pres4
-         (4,3,'2023-01-11 10:00:00'),
-         (4,6,'2023-01-11 12:00:00'),
-         -- pres5
-         (5,10,'2023-01-11 16:00:00'),
-         (5,5,'2023-01-11 18:00:00'),
-         -- pres6
-         (6,4,'2023-01-11 12:00:00'),
-         (6,2,'2023-01-11 14:00:00'),
-         -- pres7
-         (7,2,'2023-01-11 10:00:00'),
-         (7,6,'2023-01-11 14:00:00'),
-         -- pres8
-         (8,7,'2023-01-11 10:00:00'),
-         (8,9,'2023-01-11 18:00:00'),
-         -- pres9
-         (9,3,'2023-01-11 14:00:00'),
-         (9,7,'2023-01-11 14:00:00'),
-         -- pres10
-         (10,3,'2023-01-11 16:00:00'),
-         -- pres11
-         (11,8,'2023-01-11 10:00:00'),
-         (11,1,'2023-01-11 18:00:00'),
-         -- jour 4
-         -- pres2
-         (2,1,'2023-01-12 08:00:00'),
-         (2,2,'2023-01-12 10:00:00'),
-         -- pres3
-         (3,2,'2023-01-12 16:00:00'),
-         (3,3,'2023-01-12 18:00:00'),
-         -- pres4
-         (4,9,'2023-01-12 10:00:00'),
-         (4,8,'2023-01-12 12:00:00'),
-         -- pres5
-         (5,2,'2023-01-12 16:00:00'),
-         (5,5,'2023-01-12 18:00:00'),
-         -- pres6
-         (6,10,'2023-01-12 10:00:00'),
-         (6,7,'2023-01-12 14:00:00'),
-         -- pres7
-         (7,2,'2023-01-12 14:00:00'),
-         (7,3,'2023-01-12 16:00:00'),
-         -- pres8
-         (8,5,'2023-01-12 10:00:00'),
-         (8,10,'2023-01-12 18:00:00'),
-         -- pres9
-         (9,10,'2023-01-12 10:00:00'),
-         (9,7,'2023-01-12 14:00:00'),
-         -- pres10
-         (10,7,'2023-01-12 08:00:00'),
-         (10,9,'2023-01-12 14:00:00'),
-         -- pres11
-         (11,1,'2023-01-12 10:00:00'),
-         (11,1,'2023-01-12 18:00:00'),
-
-         -- -- jour 5
-         -- pres2
-         (2,10,'2023-01-13 08:00:00'),
-         (2,3,'2023-01-13 10:00:00'),
-         -- pres3
-         (3,7,'2023-01-13 16:00:00'),
-         (3,3,'2023-01-13 18:00:00'),
-         -- pres4
-         (4,9,'2023-01-13 10:00:00'),
-         (4,2,'2023-01-13 12:00:00'),
-         -- pres5
-         (5,2,'2023-01-13 16:00:00'),
-         (5,6,'2023-01-13 18:00:00'),
-         -- pres6
-         (6,10,'2023-01-13 10:00:00'),
-         (6,2,'2023-01-13 14:00:00'),
-         -- pres7
-         (7,8,'2023-01-13 14:00:00'),
-         (7,3,'2023-01-13 14:00:00'),
-         -- pres8
-         (8,2,'2023-01-13 10:00:00'),
-         (8,5,'2023-01-13 18:00:00'),
-         -- pres9
-         (9,8,'2023-01-13 10:00:00'),
-         (9,7,'2023-01-13 14:00:00'),
-         -- pres10
-         (10,7,'2023-01-13 08:00:00'),
-         (10,9,'2023-01-13 14:00:00'),
-         -- pres11
-         (11,5,'2023-01-13 10:00:00'),
-         (11,6,'2023-01-13 18:00:00'),
-
-         -- -- jour 6
-
-             -- pres2
-         (2,1,'2023-01-14 08:00:00'),
-         (2,2,'2023-01-14 10:00:00'),
-         -- pres3
-         (3,2,'2023-01-14 16:00:00'),
-         (3,3,'2023-01-14 18:00:00'),
-         -- pres4
-         (4,9,'2023-01-14 10:00:00'),
-         (4,8,'2023-01-14 12:00:00'),
-         -- pres5
-         (5,2,'2023-01-14 16:00:00'),
-         (5,8,'2023-01-14 18:00:00'),
-         -- pres6
-         (6,10,'2023-01-14 10:00:00'),
-         (6,7,'2023-01-14 14:00:00'),
-         -- pres7
-         (7,2,'2023-01-14 14:00:00'),
-         (7,3,'2023-01-14 14:00:00'),
-         -- pres8
-         (8,5,'2023-01-14 10:00:00'),
-         (8,10,'2023-01-14 18:00:00'),
-         -- pres9
-         (9,10,'2023-01-14 10:00:00'),
-         (9,5,'2023-01-14 14:00:00'),
-         -- pres10
-         (10,7,'2023-01-14 08:00:00'),
-         (10,9,'2023-01-14 14:00:00'),
-         -- pres11
-         (11,1,'2023-01-14 10:00:00'),
-         (11,3,'2023-01-14 18:00:00'),
-
-         -- -- jour 7
-         -- pres2
-         (2,7,'2023-01-15 14:00:00'),
-         (2,6,'2023-01-15 10:00:00'),
-         -- pres3
-         (3,7,'2023-01-15 16:00:00'),
-         (3,8,'2023-01-15 18:00:00'),
-         -- pres4
-         (4,3,'2023-01-15 10:00:00'),
-         (4,1,'2023-01-15 12:00:00'),
-         -- pres5
-         (5,1,'2023-01-15 16:00:00'),
-         (5,7,'2023-01-15 18:00:00'),
-         -- pres6
-         (6,10,'2023-01-15 12:00:00'),
-         (6,8,'2023-01-15 14:00:00'),
-         -- pres7
-         (7,3,'2023-01-15 16:00:00'),
-         (7,6,'2023-01-15 14:00:00'),
-         -- pres8
-         (8,8,'2023-01-15 10:00:00'),
-         (8,9,'2023-01-15 18:00:00'),
-         -- pres9
-         (9,5,'2023-01-15 14:00:00'),
-         (9,8,'2023-01-15 14:00:00'),
-         -- pres10
-         (10,9,'2023-01-15 12:00:00'),
-         (10,2,'2023-01-15 12:00:00'),
-         -- pres11
-         (11,8,'2023-01-15 12:00:00'),
-         (11,1,'2023-01-15 08:00:00');*/
 
 func getProviderNum(num: Int) -> User {
     var providers: [User] = []
@@ -263,26 +186,4 @@ func getProviderNum(num: Int) -> User {
     }
     
     return providers[num - 1]
-}
-
-func getStandNum(num: Int) -> Stand {
-    var stand: Stand = .none
-    for st in Stand.allCases {
-        if st.rawValue == "Stand\(num)" {
-            stand = st
-        }
-    }
-    return stand
-}
-
-func getDateTime(day: Int, month: Int, year: Int, hour: Int, min: Int) -> Date {
-    let dateString = "\(day)/\(month)/\(year) \(hour):\(min)"
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
-        
-    guard let date = dateFormatter.date(from: dateString) else {
-        fatalError("Invalid date string")
-    }
-        
-    return date
 }

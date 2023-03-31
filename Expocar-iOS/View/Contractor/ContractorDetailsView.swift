@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ContractorDetailsView: View {
+    @EnvironmentObject var viewModel: ExpocarViewModel    
     @State var provider: User
-    @State var values: [String] = ["Write your comment here ...",""]
+    @State var showAddComment = false
+    @State var showAllComments = false
     
     var body: some View {
         VStack(spacing: 15) {
@@ -33,32 +35,38 @@ struct ContractorDetailsView: View {
                     Image("\(provider.societe.rawValue)_logo")
                 }.padding()
             }
-            VStack(spacing: 15) {
-                TextEditor(text: $values[0])
-                    .frame(height: 150)
-                    .padding()
-                    .border(Color.gray)
-                
-                HStack {
-                    Text("Username : ")
-                    TextField("Name", text: $values[1])
-                        .padding(.horizontal)
-                        .frame(height: 55)
-                        .background(Color(.systemGray4))
-                        .cornerRadius(10)
-                }.padding()
-                
+            
+            
+            HStack {
                 Button {
-                    
+                    showAddComment.toggle()
                 } label: {
-                    Text("Submit")
-                        .foregroundColor(.white)
-                        .font(Font.custom("evildead", size: 16))
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.accentColor)
-                        .cornerRadius(10)
-                        .padding()
+                    NavigationLink(destination: AddCommentView()) {
+                        Text("Add comment")
+                            .foregroundColor(.white)
+                            .font(Font.custom("evildead", size: 16))
+                            .frame(height: 55)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.accentColor)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                }
+                if viewModel.selectedProvider.comments.count > 0 {
+                    Button {
+                        showAllComments.toggle()
+                    } label: {
+                        NavigationLink(destination: AllCommentsView()) {
+                            Text("View all comments")
+                                .foregroundColor(.white)
+                                .font(Font.custom("evildead", size: 16))
+                                .frame(height: 55)
+                                .frame(maxWidth: .infinity)
+                                .background(Color.accentColor)
+                                .cornerRadius(10)
+                                .padding()
+                        }
+                    }
                 }
             }
         }
@@ -67,6 +75,6 @@ struct ContractorDetailsView: View {
 
 struct ContractorDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContractorDetailsView(provider: User.allCases[1])
+        ContractorDetailsView(provider: User.allCases[1]).environmentObject(ExpocarViewModel())
     }
 }

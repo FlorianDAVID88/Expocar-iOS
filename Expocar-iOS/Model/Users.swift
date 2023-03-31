@@ -37,7 +37,7 @@ struct User {
     var activity: Activity
     var type_user: TypeUser
     var societe: Societe
-    var comments: [Comment] = [Comment(content_comment: "Great", note: 4)]
+    var comments: [Comment] = []
     
     static var allCases = [
         User(name: "Mbizi", surname: "Charlene", email: "charlene@gmail.com", activity: .none, type_user: .Organizer, societe: .none),
@@ -61,4 +61,8 @@ struct User {
         User(name: "David", surname: "Florian", email: "fdavid@gmail.com", activity: .none, type_user: .Customer, societe: .none),
         User(name: "Bianchi", surname: "Eliot", email: "bianchi@gmail.com", activity: .none, type_user: .Customer, societe: .none)
     ]
+    
+    mutating func addCommentForUser(comment: String, grade: Int) {
+        self.comments.append(Comment(content_comment: comment, note: grade))
+    }
 }

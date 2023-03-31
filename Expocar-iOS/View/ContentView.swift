@@ -20,7 +20,7 @@ struct ContentView: View {
                         Text("Home")
                     }
                 
-                MapView()
+                MapView().environmentObject(ExpocarViewModel())
                     .tabItem {
                         Image(systemName: "map")
                         Text("Map")

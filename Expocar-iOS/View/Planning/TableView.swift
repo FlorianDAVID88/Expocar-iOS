@@ -16,35 +16,6 @@ struct Course {
     var location: String
 }
 
-struct TimetableCellView: View {
-    var course: Course
-    
-    var body: some View {
-        VStack {
-            Text(course.name)
-            Text(course.location)
-            Text("\(course.startTime) - \(course.endTime)")
-        }
-    }
-}
-
-
-struct TimetableView: View {
-    var courses: [Course]
-    
-    var body: some View {
-        ScrollView {
-            LazyHGrid(rows: Array(repeating: GridItem(.fixed(60)), count: 7), spacing: 20) {
-                ForEach(courses, id: \.self.id_course) { course in
-                    TimetableCellView(course: course)
-                        .border(Color.gray)
-                }
-            }
-        }
-    }
-}
-
-
 struct TableView: View {
     var body: some View {
         let courses = [
@@ -54,8 +25,19 @@ struct TableView: View {
         ]
         
         NavigationView {
-            TimetableView(courses: courses)
-                .navigationTitle("Timetable")
+            ScrollView {
+                LazyHGrid(rows: Array(repeating: GridItem(.fixed(100)), count: 7), spacing: 20) {
+                    ForEach(courses, id: \.self.id_course) { course in
+                        VStack {
+                            Text(course.name)
+                            Text(course.location)
+                            Text("\(course.startTime)")
+                            Text("\(course.endTime)")
+                        }.border(Color.gray)
+                    }
+                }
+            }
+            .navigationTitle("Timetable")
         }
     }
 }

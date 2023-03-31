@@ -10,6 +10,7 @@ import Foundation
 class ExpocarViewModel: ObservableObject {
     @Published var selectedStand: Stand = .none
     @Published var crenaux: [Creneau] = []
+    @Published var selectedProvider: User = User.allCases[0]
     
     init() {
         setCrenaux()
@@ -29,20 +30,28 @@ class ExpocarViewModel: ObservableObject {
         return creneaux
     }
     
-    func getCreneauxFromDay(day: Day) -> [Creneau] {
+    func getCreneauxFromDay(day: Day, hour: Int) -> [Creneau] {
         var creneaux: [Creneau] = []
         for cr in crenaux {
-            if cr.day == day {
+            if cr.day == day && cr.hour == hour {
                 creneaux.append(cr)
             }
         }
         return creneaux
     }
     
-    func validValue(value: Optional<Any>) -> Optional<Any> {
-        guard let valueReturn = value else {
-            fatalError("Invalid")
+    func getCreneauxFromStandAndDay(stand: Stand, day: Day, hour: Int) -> [Creneau] {
+        var creneaux: [Creneau] = []
+        for cr in crenaux {
+            let endHour = cr.hour + 2     //On considère un créneau de 2h pour chaque activité effectuée dans un Stand
+            if cr.day == day && cr.hour <= hour && endHour > hour && cr.stand == stand {
+                creneaux.append(cr)
+            }
         }
-        return valueReturn
+        return creneaux
+    }
+    
+    func addComment(comment: String, grade: Int) {
+        selectedProvider.addCommentForUser(comment: comment, grade: grade)
     }
 }

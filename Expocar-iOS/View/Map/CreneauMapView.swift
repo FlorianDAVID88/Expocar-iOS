@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct CreneauMapView: View {
-    @EnvironmentObject var viewModel: ExpocarViewModel
-    @State var stand: Stand
+    @State var creneau: Creneau
     
     var body: some View {
-        if getColor() == .green {
-            let creneau: Creneau = viewModel.getCreneauxFromStand(stand: stand)[0]
+        ZStack {
+            let stand = creneau.stand
             VStack(spacing: 5) {
                 ZStack {
                     Rectangle()
-                        .background(getColor())
+                        .background(.green)
                         .opacity(0.25)
                         .frame(height: 45)
                     
@@ -59,35 +58,12 @@ struct CreneauMapView: View {
                     .multilineTextAlignment(.center)
                 }
             }
-        } else {
-            ZStack {
-                Rectangle()
-                    .background(getColor())
-                    .opacity(0.25)
-                    .frame(height: 200)
-                
-                Text(getColor() == .blue
-                     ? "Click on a stand to see the current activity taking place"
-                     : "There is no activity right now")
-                    .font(Font.custom("evildead", size: 18))
-                    .multilineTextAlignment(.center)
-            }
-        }
-    }
-    
-    func getColor() -> Color {
-        if(stand == .none) {
-            return .blue
-        } else if viewModel.getCreneauxFromStand(stand: stand).count == 0 {
-            return .red
-        } else {
-            return .green
         }
     }
 }
 
 struct CreneauMapView_Previews: PreviewProvider {
     static var previews: some View {
-        CreneauMapView(stand: .Stand10).environmentObject(ExpocarViewModel())
+        CreneauMapView(creneau: Creneau(provider: getProviderNum(num: 1), stand: .Stand07, day: .Monday, hour: 14))
     }
 }

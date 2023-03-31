@@ -25,10 +25,6 @@ struct DayPlanningView: View {
                 Rectangle()
                     .foregroundColor(.white)
                     .frame(height: 150)
-                /*ForEach(viewModel.getCreneauxFromDay(date: Date()), id: \.self.id_creneau) { cr in
-                    Rectangle()
-                        .foregroundColor(.gray)
-                }*/
             }
         }
         .frame(height: 500)

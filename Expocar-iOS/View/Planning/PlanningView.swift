@@ -16,7 +16,9 @@ struct PlanningView: View {
             DayPlanningView(day: selectedDay, stand: selectedStand)
             Picker("Day", selection: $selectedDay) {
                 ForEach(Day.allCases, id: \.self) { d in
-                    Text(d.rawValue.prefix(3).uppercased())
+                    if d != .none {
+                        Text(d.rawValue.prefix(3).uppercased())
+                    }
                 }
             }.pickerStyle(.segmented)
             

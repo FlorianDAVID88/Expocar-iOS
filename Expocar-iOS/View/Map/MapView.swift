@@ -17,28 +17,23 @@ struct MapView: View {
                     Image("map_svg_background")
                         .resizable()
                     
-                    Image("map_svg_stands")
-                        .resizable()
-                        .onTapGesture {
-                            viewModel.selectedStand = .Stand10
+                
+                    ForEach(Stand.allCases, id: \.self) { st in
+                        if(st != .none) {
+                            let width = UIImage(named: st.rawValue)!.size.width / st.ratio
+                            let height = UIImage(named: st.rawValue)!.size.height / st.ratio
+                            Image("\(st.rawValue)")
+                                .resizable()
+                                .frame(width: width, height: height)
+                                .position(x: st.translation[0] + width/2.0, y: st.translation[1] + height/2.0)
+                                .onTapGesture {
+                                    viewModel.selectedStand = st
+                                }
                         }
-                    
-                    /*ForEach(Stand.allCases, id: \.self) { st in
-                     if(st != .none) {
-                     let width = UIImage(named: st.rawValue)!.size.width / st.ratio
-                     let height = UIImage(named: st.rawValue)!.size.height / st.ratio
-                     Image("\(st.rawValue)")
-                     .resizable()
-                     .frame(width: width, height: height)
-                     .position(x: st.translation[0] + width/2.0, y: st.translation[1] + height/2.0)
-                     .onTapGesture {
-                     viewModel.selectedStand = st
-                     }
-                     }
-                     }*/
+                    }
                 }.aspectRatio(contentMode: .fit)
                 
-                CreneauMapView(stand: .Stand10)
+                SliderCreneauxMapView()
             }
         }
     }
