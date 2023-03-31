@@ -49,7 +49,7 @@ struct ContractorDetailsView: View {
                             .padding()
                     }
                 }
-                if viewModel.selectedProvider.comments.count > 0 {
+                //if viewModel.selectedProvider.comments.count > 0 {
                     Button {
                     } label: {
                         NavigationLink(destination: AllCommentsView(provider: provider)) {
@@ -63,7 +63,7 @@ struct ContractorDetailsView: View {
                                 .padding()
                         }
                     }
-                }
+                //}
             }
         }
     }
