@@ -15,17 +15,17 @@ enum Stand: String, CaseIterable {
     var translation: [Double] {
         switch self {
             case .Stand01: return [72, 0.402]
-            case .Stand02: return [70.114 * ratio, 32.196 * ratio]
+            case .Stand02: return [131, 60]
             case .Stand03: return [27, 92]
             case .Stand04: return [123, 162]
-            case .Stand05: return [198, 135]
+            case .Stand05: return [199, 136]
             case .Stand06: return [58, 250]
             case .Stand07: return [30, 322]
             case .Stand08: return [198, 288]
             case .Stand09: return [320, 305]
-            case .Stand10: return [255, 355]
+            case .Stand10: return [254, 347]
             case .Stand11: return [310, 335]
-            case .none: return [0.0, 0.0]//2.04
+            case .none: return [0.0, 0.0]
         }
     }
 }
