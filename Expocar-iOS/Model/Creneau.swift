@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum Day: String, CaseIterable {
-    case Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday, none
-}
-
 struct Creneau {
     var id_creneau = UUID()
     var provider: User

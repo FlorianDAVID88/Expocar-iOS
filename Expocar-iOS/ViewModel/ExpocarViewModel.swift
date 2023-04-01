@@ -15,7 +15,7 @@ class ExpocarViewModel: ObservableObject {
     func getCreneauxFromStandAndDay(stand: Stand, day: Day, hour: Int) -> [Creneau] {
         var creneaux: [Creneau] = []
         for cr in Creneau.allCases {
-            let endHour = cr.hour + 2     //On considère un créneau de 2h pour chaque activité effectuée dans un Stand
+            let endHour = cr.hour + 2     // On considère un créneau de 2h pour chaque activité effectuée dans un Stand
             if cr.day == day && cr.hour <= hour && endHour > hour && cr.stand == stand {
                 creneaux.append(cr)
             }
@@ -24,10 +24,10 @@ class ExpocarViewModel: ObservableObject {
     }
     
     func getDayFromDateNow() -> Day {
-        let date = Date.now
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
-        let dayStr = dateFormatter.string(from: date).localized()
+        
+        let dayStr = dateFormatter.string(from: Date.now).localized()
         for d in Day.allCases {
             if d.rawValue == dayStr {
                 return d
@@ -37,14 +37,14 @@ class ExpocarViewModel: ObservableObject {
     }
     
     func getHourFromDateNow() -> Int {
-        let date = Date.now
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm a"
 
-        let timeString = dateFormatter.string(from: date)
+        let timeString = dateFormatter.string(from: Date.now)
         if Int(timeString.prefix(2))! == 12 {
             return timeString.contains("AM") ? 0 : 12
         }
+        
         return timeString.contains("PM") ? Int(timeString.prefix(2))! + 12 : Int(timeString.prefix(2))!
     }
     

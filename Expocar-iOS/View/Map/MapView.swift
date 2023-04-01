@@ -29,7 +29,7 @@ struct MapView: View {
                                     viewModel.selectedStand = st
                                     
                                     let day: Day = viewModel.getDayFromDateNow()
-                                    let hour = viewModel.getHourFromDateNow() + 14
+                                    let hour = viewModel.getHourFromDateNow()
                                     let creneaux: [Creneau] = viewModel.getCreneauxFromStandAndDay(stand: st, day: day, hour: hour)
                                     if creneaux.count > 0 {
                                         viewModel.selectedProvider = creneaux[0].provider

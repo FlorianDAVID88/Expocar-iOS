@@ -13,7 +13,7 @@ struct StandCreneauMapView: View {
     var body: some View {
         let stand: Stand = viewModel.selectedStand
         let day: Day = viewModel.getDayFromDateNow()
-        let hour = viewModel.getHourFromDateNow() + 14
+        let hour = viewModel.getHourFromDateNow()
         let creneaux: [Creneau] = viewModel.getCreneauxFromStandAndDay(stand: stand, day: day, hour: hour)
         
         if creneaux.count > 0 {

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EF01C64829D79B1300F5A336 /* Societe.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01C64729D79B1300F5A336 /* Societe.swift */; };
 		EF01C64A29D7A3C500F5A336 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01C64929D7A3C500F5A336 /* CommentView.swift */; };
+		EF01C64C29D7AB9900F5A336 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01C64B29D7AB9900F5A336 /* Day.swift */; };
+		EF01C64E29D7ABDD00F5A336 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF01C64D29D7ABDD00F5A336 /* Activity.swift */; };
 		EF0351E629D6A41C00BE8496 /* AddCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0351E529D6A41C00BE8496 /* AddCommentView.swift */; };
 		EF0351E829D6A6DA00BE8496 /* AllCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0351E729D6A6DA00BE8496 /* AllCommentsView.swift */; };
 		EF36EAE529D574DD00EF82BA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36EAE429D574DD00EF82BA /* Comment.swift */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		EF01C64729D79B1300F5A336 /* Societe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Societe.swift; sourceTree = "<group>"; };
 		EF01C64929D7A3C500F5A336 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		EF01C64B29D7AB9900F5A336 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		EF01C64D29D7ABDD00F5A336 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		EF0351E529D6A41C00BE8496 /* AddCommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentView.swift; sourceTree = "<group>"; };
 		EF0351E729D6A6DA00BE8496 /* AllCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommentsView.swift; sourceTree = "<group>"; };
 		EF36EAE429D574DD00EF82BA /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				EF6ED26129B9FCE40021FEA5 /* Creneau.swift */,
 				EF36EAE429D574DD00EF82BA /* Comment.swift */,
 				EF01C64729D79B1300F5A336 /* Societe.swift */,
+				EF01C64B29D7AB9900F5A336 /* Day.swift */,
+				EF01C64D29D7ABDD00F5A336 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,11 +297,13 @@
 				EF6ED24C29B9FC150021FEA5 /* Expocar_iOSApp.swift in Sources */,
 				EF36EAE529D574DD00EF82BA /* Comment.swift in Sources */,
 				EF6ED26E29B9FD4C0021FEA5 /* SliderBarView.swift in Sources */,
+				EF01C64C29D7AB9900F5A336 /* Day.swift in Sources */,
 				EF6ED26429B9FCF30021FEA5 /* ExpocarViewModel.swift in Sources */,
 				EF5A81CD29D5C7C600CC8E0F /* StandCreneauMapView.swift in Sources */,
 				EF6ED25E29B9FCC90021FEA5 /* Stand.swift in Sources */,
 				EF0351E629D6A41C00BE8496 /* AddCommentView.swift in Sources */,
 				EF01C64A29D7A3C500F5A336 /* CommentView.swift in Sources */,
+				EF01C64E29D7ABDD00F5A336 /* Activity.swift in Sources */,
 				EF6ED26229B9FCE40021FEA5 /* Creneau.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
